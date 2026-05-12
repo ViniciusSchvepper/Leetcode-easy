@@ -1,11 +1,35 @@
-function lengthOfLastWord (s) {
+/*
+Given a string s consisting of words and spaces, return the length of the last word in the string.
+
+A word is a maximal substring consisting of non-space characters only.
+
+ 
+
+Example 1:
+
+Input: s = "Hello World"
+Output: 5
+Explanation: The last word is "World" with length 5.
+Example 2:
+
+Input: s = "   fly me   to   the moon  "
+Output: 4
+Explanation: The last word is "moon" with length 4.
+Example 3:
+
+Input: s = "luffy is still joyboy"
+Output: 6
+Explanation: The last word is "joyboy" with length 6.
+ 
+*/
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLastWord = function(s) {
     const turnIntoArr = s.trim().split(' ')
     const getLastIndex = turnIntoArr.pop()
 
     return getLastIndex.length
-}
-
-const teste1 = lengthOfLastWord("Hello World") // output = 5
-const teste2 = lengthOfLastWord("   fly me   to   the moon  ") // output = 4
-const teste3 = lengthOfLastWord("luffy is still joyboy") // output = 6
-
+};
